@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Meme Screamer",
+  "version": "1.0",
+  "description": "Screams when you get a Compile Error on LeetCode.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://leetcode.com/problems/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["faah.mp3"],
+      "matches": ["https://leetcode.com/*"]
+    }
+  ]
+}
